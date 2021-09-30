@@ -11,4 +11,5 @@ In that panel, there are also some properties you can use, some of them;
 - You can add new categories
 - Verify the comments for them to be shown.
 - You can also verify the recipes offered by users
+
 and some other properties.

@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="YemekTarifiSitesi.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="style/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&display=swap" rel="stylesheet">
+
+
+    </head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <asp:Image ID="Image1" runat="server" Height="152px" ImageUrl="~/img/login.jpg" Width="810px" />
+        </div>
+       
+        <div class="container">
+            <div class="menus">
+                <span class="kategoriBaslik">Menüler</span>
+                <br />
+                <table class="navigatorTable">
+                    <tr>
+                        <td class="kategoriLabel"><a href="Kategoriler.aspx">Kategoriler</a></td>
+                    </tr>
+                    <tr>
+                        <td class="kategoriLabel"><a href="Yemekler.aspx">Yemekler</a></td>
+                    </tr>
+                    <tr>
+                        <td class="kategoriLabel"><a href="Yorumlar.aspx">Yorumlar</a> </td>
+                    </tr>
+                    <tr>
+                        <td class="kategoriLabel"><a href="Mesajlar.aspx">Mesajlar</a></td>
+                    </tr>
+                    <tr>
+                        <td class="kategoriLabel"><a href="GununYemegiAdmin.aspx">Günün Yemeği</a></td>
+                    </tr>
+                    <tr>
+                        <td class="kategoriLabel"><a href="Tarifler.aspx">Tarifler</a></td>
+                    </tr>
+                    <tr>
+                        <td class="kategoriLabel"><a href="HakkimizdaAdmin.aspx">Hakkımızda</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>
+

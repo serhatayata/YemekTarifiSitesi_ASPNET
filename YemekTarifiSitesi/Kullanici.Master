@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Kullanici.master.cs" Inherits="YemekTarifiSitesi.Kullanici" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="style/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <asp:Image ID="Image1" runat="server" Height="146px" ImageUrl="~/img/Header_IMG.jpg" Width="796px" />
+        </div>
+        <div class="navigator">
+            <table class="navigatorTable">
+                <tr>
+                    <td><a href="AnaSayfa.aspx">ANA SAYFA</a></td>
+                    <td><a href="GununYemegi.aspx">GÜNÜN YEMEĞİ</a></td>
+                    <td><a href="TarifOner.aspx">TARİF ÖNER</a></td>
+                    <td><a href="Hakkimizda.aspx">HAKKIMIZDA</a></td>
+                    <td><a href="Iletisim.aspx">İLETİŞİM</a></td>
+                    <td><a href="AdminGiris.aspx">ADMİN</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="container">
+            <div class="menus">
+                <span class="kategoriBaslik">Kategoriler</span>
+                <asp:DataList ID="DataList1" runat="server" Width="195px">
+                    <ItemTemplate>
+                        <div>
+                            <a href="KategoriDetay.aspx?KategoriID=<%#Eval("KategoriID")%>">
+                            <asp:Label ID="Label1" runat="server" CssClass="kategoriLabel" Text='<%# Eval("KategoriAd") %>'></asp:Label>
+                            </a>
+                            &nbsp;(
+                            <asp:Label ID="Label2" runat="server" Text='<%# Eval("KategoriAdet") %>'></asp:Label>
+                            )</div>
+                    </ItemTemplate>
+                </asp:DataList>
+            </div>
+            <div class="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
